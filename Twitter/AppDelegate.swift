@@ -8,8 +8,20 @@
 
 import UIKit
 
+enum kColors {
+  case Twitter
+
+  func color() -> UIColor {
+    switch self {
+      case Twitter:
+        return UIColor(hex: 0x55ACEE)
+    }
+  }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
   private let twitterClient = TwitterClient.instance
 
   lazy var window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -36,8 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
               parameters: nil,
               success: {(operation: AFHTTPRequestOperation!,
                 response: AnyObject!) -> Void in
-                //              var user = User(dictionary: response as NSDictionary)
-                //              User.currentUser = user
+                let user = User.create(response)
+
+                User.currentUser = user
 
                 _ = self.window.rootViewController?.presentViewController(
                   homeTimelineViewController,

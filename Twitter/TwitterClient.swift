@@ -19,7 +19,19 @@ private let _TwitterClientInstance = TwitterClient(
 
 class TwitterClient: BDBOAuth1RequestOperationManager {
 
-  func fetchHomeTimeline() {
+  func fetchHomeTimeline(#success: (response: AnyObject) -> Void,
+    error: (error: NSError) -> Void) {
+    GET("1.1/statuses/home_timeline.json",
+      parameters: nil,
+      success: {(operation: AFHTTPRequestOperation!,
+        response: AnyObject!) -> Void in
+        success(response: response)
+      },
+      failure: { (operation: AFHTTPRequestOperation!,
+        error: NSError!) -> Void in
+        // Handle error
+      }
+    )
   }
 
   class var instance: TwitterClient {

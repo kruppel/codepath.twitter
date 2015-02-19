@@ -9,13 +9,14 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+
   private let twitterClient = TwitterClient.instance
   private let loginButton:UIButton = UIButton()
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    view.backgroundColor = UIColor.whiteColor()
+    view.backgroundColor = kColors.Twitter.color()
 
     loginButton.frame = CGRectMake((view.bounds.width / 2) - 125, 400, 250, 40)
     loginButton.setTitle("Login with Twitter", forState: .allZeros)

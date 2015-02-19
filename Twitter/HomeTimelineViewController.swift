@@ -9,12 +9,24 @@
 import UIKit
 
 class HomeTimelineViewController: UIViewController {
-  private let twitterClient = TwitterClient.instance
+
+  private let twitterClient: TwitterClient = TwitterClient.instance
+  lazy private var statusesTableView: UITableView = UITableView()
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    statusesTableView.frame = view.bounds
+    statusesTableView.backgroundColor = UIColor.whiteColor()
+
     SVProgressHUD.show()
-    //    twitterClient.fetchHomeTimeline()
+    twitterClient.fetchHomeTimeline(
+      success: didFetchTimeline,
+      error: { (error: NSError!) -> Void in
+      })
+  }
+
+  func didFetchTimeline(response: AnyObject!) {
+    println(response)
   }
 }

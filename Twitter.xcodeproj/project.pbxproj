@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5E6D9761A95B4060075367B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6D9751A95B4060075367B /* SwiftyJSON.swift */; };
+		C5E6D9781A95B4820075367B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6D9771A95B4820075367B /* User.swift */; };
+		C5E6D97A1A95C5800075367B /* UIColor+Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6D9791A95C5800075367B /* UIColor+Twitter.swift */; };
 		C5FD4E291A95ACC7009F4E79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD4E281A95ACC7009F4E79 /* AppDelegate.swift */; };
 		C5FD4E2E1A95ACC7009F4E79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5FD4E2C1A95ACC7009F4E79 /* Main.storyboard */; };
 		C5FD4E301A95ACC7009F4E79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5FD4E2F1A95ACC7009F4E79 /* Images.xcassets */; };
@@ -32,6 +35,9 @@
 		60A2B79C0EFDC2503E89BD8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC02EFC1134C80CBC6360042 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B0ECEA4C90E8DE0F1BCE53BA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C5E6D9751A95B4060075367B /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		C5E6D9771A95B4820075367B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C5E6D9791A95C5800075367B /* UIColor+Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Twitter.swift"; sourceTree = "<group>"; };
 		C5FD4E231A95ACC7009F4E79 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FD4E271A95ACC7009F4E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5FD4E281A95ACC7009F4E79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,13 +97,16 @@
 			children = (
 				C5FD4E281A95ACC7009F4E79 /* AppDelegate.swift */,
 				C5FD4E511A95AE22009F4E79 /* HomeTimelineViewController.swift */,
-				C5FD4E2C1A95ACC7009F4E79 /* Main.storyboard */,
-				C5FD4E481A95ACFB009F4E79 /* LoginViewController.swift */,
-				C5FD4E4C1A95AD87009F4E79 /* TwitterClient.swift */,
 				C5FD4E2F1A95ACC7009F4E79 /* Images.xcassets */,
 				C5FD4E311A95ACC7009F4E79 /* LaunchScreen.xib */,
+				C5FD4E481A95ACFB009F4E79 /* LoginViewController.swift */,
+				C5FD4E2C1A95ACC7009F4E79 /* Main.storyboard */,
 				C5FD4E261A95ACC7009F4E79 /* Supporting Files */,
+				C5E6D9751A95B4060075367B /* SwiftyJSON.swift */,
 				C5FD4E4E1A95AD9B009F4E79 /* Twitter-Bridging-Header.h */,
+				C5FD4E4C1A95AD87009F4E79 /* TwitterClient.swift */,
+				C5E6D9791A95C5800075367B /* UIColor+Twitter.swift */,
+				C5E6D9771A95B4820075367B /* User.swift */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -281,7 +290,10 @@
 			files = (
 				C5FD4E521A95AE22009F4E79 /* HomeTimelineViewController.swift in Sources */,
 				C5FD4E491A95ACFB009F4E79 /* LoginViewController.swift in Sources */,
+				C5E6D97A1A95C5800075367B /* UIColor+Twitter.swift in Sources */,
+				C5E6D9781A95B4820075367B /* User.swift in Sources */,
 				C5FD4E4D1A95AD87009F4E79 /* TwitterClient.swift in Sources */,
+				C5E6D9761A95B4060075367B /* SwiftyJSON.swift in Sources */,
 				C5FD4E291A95ACC7009F4E79 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
