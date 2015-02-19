@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 kruppel. All rights reserved.
 //
 
-import UIKit
-
 struct User {
   let id: Int!
   var name: String?

@@ -8,17 +8,6 @@
 
 import UIKit
 
-enum kColors {
-  case Twitter
-
-  func color() -> UIColor {
-    switch self {
-      case Twitter:
-        return UIColor(hex: 0x55ACEE)
-    }
-  }
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -41,19 +30,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           method: "POST",
           requestToken: BDBOAuth1Credential(queryString: url.query)!,
           success: { (credential: BDBOAuth1Credential!) -> Void in
-            let homeTimelineViewController = HomeTimelineViewController()
 
-            self.twitterClient.requestSerializer.saveAccessToken(credential)
-            self.twitterClient.GET("1.1/account/verify_credentials.json",
+            let tc = self.twitterClient
+
+            tc.requestSerializer.saveAccessToken(credential)
+            tc.GET("1.1/account/verify_credentials.json",
               parameters: nil,
               success: {(operation: AFHTTPRequestOperation!,
                 response: AnyObject!) -> Void in
+                let homeTimelineViewController = HomeTimelineViewController()
+                let navigationController = UINavigationController(
+                  rootViewController: homeTimelineViewController
+                )
                 let user = User.create(response)
 
                 User.currentUser = user
 
                 _ = self.window.rootViewController?.presentViewController(
-                  homeTimelineViewController,
+                  navigationController,
                   animated: false,
                   completion: nil
                 )
