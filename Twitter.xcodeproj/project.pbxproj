@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C54270721A9829330010E601 /* NSDate+Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54270711A9829330010E601 /* NSDate+Twitter.swift */; };
+		C54270741A9AC70C0010E601 /* RetweetStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54270731A9AC70C0010E601 /* RetweetStatusTableViewCell.swift */; };
+		C55F22AD1A9B7E2300CA32A6 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F22AC1A9B7E2300CA32A6 /* StatusView.swift */; };
+		C57850FE1A9AD8DB00EBC97F /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57850FB1A9AD8DB00EBC97F /* Box.swift */; };
+		C57850FF1A9AD8DB00EBC97F /* BoxType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57850FC1A9AD8DB00EBC97F /* BoxType.swift */; };
+		C57851001A9AD8DB00EBC97F /* MutableBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57850FD1A9AD8DB00EBC97F /* MutableBox.swift */; };
+		C57851021A9AE2F800EBC97F /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57851011A9AE2F800EBC97F /* ComposeViewController.swift */; };
+		C578510A1A9AF5C500EBC97F /* ComposeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57851091A9AF5C500EBC97F /* ComposeTextView.swift */; };
+		C578510C1A9B164D00EBC97F /* StatusActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C578510B1A9B164D00EBC97F /* StatusActionsView.swift */; };
+		C578510E1A9B4C0900EBC97F /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C578510D1A9B4C0900EBC97F /* StatusViewController.swift */; };
 		C5E6D9761A95B4060075367B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6D9751A95B4060075367B /* SwiftyJSON.swift */; };
 		C5E6D9781A95B4820075367B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6D9771A95B4820075367B /* User.swift */; };
 		C5E6D97A1A95C5800075367B /* UIColor+Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6D9791A95C5800075367B /* UIColor+Twitter.swift */; };
 		C5E6D9821A95CE060075367B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6D9811A95CE060075367B /* Colors.swift */; };
 		C5E6D9841A95CF3C0075367B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6D9831A95CF3C0075367B /* Status.swift */; };
 		C5E6D9871A95D4050075367B /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6D9861A95D4050075367B /* StatusTableViewCell.swift */; };
+		C5E6D98A1A9723F70075367B /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6D9891A9723F70075367B /* AvatarImageView.swift */; };
+		C5E6D98C1A9726840075367B /* UIImageView+Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6D98B1A9726840075367B /* UIImageView+Twitter.swift */; };
 		C5FD4E291A95ACC7009F4E79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD4E281A95ACC7009F4E79 /* AppDelegate.swift */; };
 		C5FD4E2E1A95ACC7009F4E79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5FD4E2C1A95ACC7009F4E79 /* Main.storyboard */; };
 		C5FD4E301A95ACC7009F4E79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5FD4E2F1A95ACC7009F4E79 /* Images.xcassets */; };
@@ -38,12 +50,24 @@
 		60A2B79C0EFDC2503E89BD8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC02EFC1134C80CBC6360042 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B0ECEA4C90E8DE0F1BCE53BA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C54270711A9829330010E601 /* NSDate+Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+Twitter.swift"; path = "Classes/Categories/NSDate+Twitter.swift"; sourceTree = "<group>"; };
+		C54270731A9AC70C0010E601 /* RetweetStatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RetweetStatusTableViewCell.swift; path = Classes/Views/RetweetStatusTableViewCell.swift; sourceTree = "<group>"; };
+		C55F22AC1A9B7E2300CA32A6 /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusView.swift; path = Classes/Views/StatusView.swift; sourceTree = "<group>"; };
+		C57850FB1A9AD8DB00EBC97F /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Classes/Vendor/Box.swift; sourceTree = "<group>"; };
+		C57850FC1A9AD8DB00EBC97F /* BoxType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoxType.swift; path = Classes/Vendor/BoxType.swift; sourceTree = "<group>"; };
+		C57850FD1A9AD8DB00EBC97F /* MutableBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MutableBox.swift; path = Classes/Vendor/MutableBox.swift; sourceTree = "<group>"; };
+		C57851011A9AE2F800EBC97F /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComposeViewController.swift; path = Classes/ViewControllers/ComposeViewController.swift; sourceTree = "<group>"; };
+		C57851091A9AF5C500EBC97F /* ComposeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComposeTextView.swift; path = Classes/Views/ComposeTextView.swift; sourceTree = "<group>"; };
+		C578510B1A9B164D00EBC97F /* StatusActionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusActionsView.swift; path = Classes/Views/StatusActionsView.swift; sourceTree = "<group>"; };
+		C578510D1A9B4C0900EBC97F /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusViewController.swift; path = Classes/Views/StatusViewController.swift; sourceTree = "<group>"; };
 		C5E6D9751A95B4060075367B /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Classes/Vendor/SwiftyJSON.swift; sourceTree = "<group>"; };
 		C5E6D9771A95B4820075367B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Classes/Models/User.swift; sourceTree = "<group>"; };
 		C5E6D9791A95C5800075367B /* UIColor+Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Twitter.swift"; path = "Classes/Categories/UIColor+Twitter.swift"; sourceTree = "<group>"; };
 		C5E6D9811A95CE060075367B /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Classes/Constants/Colors.swift; sourceTree = "<group>"; };
 		C5E6D9831A95CF3C0075367B /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Status.swift; path = Classes/Models/Status.swift; sourceTree = "<group>"; };
-		C5E6D9861A95D4050075367B /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
+		C5E6D9861A95D4050075367B /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusTableViewCell.swift; path = Classes/Views/StatusTableViewCell.swift; sourceTree = "<group>"; };
+		C5E6D9891A9723F70075367B /* AvatarImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvatarImageView.swift; path = Classes/Views/AvatarImageView.swift; sourceTree = "<group>"; };
+		C5E6D98B1A9726840075367B /* UIImageView+Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Twitter.swift"; path = "Classes/Categories/UIImageView+Twitter.swift"; sourceTree = "<group>"; };
 		C5FD4E231A95ACC7009F4E79 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FD4E271A95ACC7009F4E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5FD4E281A95ACC7009F4E79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +116,8 @@
 			children = (
 				C5FD4E481A95ACFB009F4E79 /* LoginViewController.swift */,
 				C5FD4E511A95AE22009F4E79 /* HomeTimelineViewController.swift */,
+				C57851011A9AE2F800EBC97F /* ComposeViewController.swift */,
+				C578510D1A9B4C0900EBC97F /* StatusViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -99,6 +125,9 @@
 		C5E6D97D1A95CC520075367B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C57850FB1A9AD8DB00EBC97F /* Box.swift */,
+				C57850FC1A9AD8DB00EBC97F /* BoxType.swift */,
+				C57850FD1A9AD8DB00EBC97F /* MutableBox.swift */,
 				C5E6D9751A95B4060075367B /* SwiftyJSON.swift */,
 			);
 			name = Vendor;
@@ -108,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				C5E6D9791A95C5800075367B /* UIColor+Twitter.swift */,
+				C5E6D98B1A9726840075367B /* UIImageView+Twitter.swift */,
+				C54270711A9829330010E601 /* NSDate+Twitter.swift */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -132,8 +163,20 @@
 			isa = PBXGroup;
 			children = (
 				C5E6D9861A95D4050075367B /* StatusTableViewCell.swift */,
+				C578510B1A9B164D00EBC97F /* StatusActionsView.swift */,
+				C57851091A9AF5C500EBC97F /* ComposeTextView.swift */,
+				C55F22AC1A9B7E2300CA32A6 /* StatusView.swift */,
+				C5E6D9891A9723F70075367B /* AvatarImageView.swift */,
+				C54270731A9AC70C0010E601 /* RetweetStatusTableViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		C5E6D9881A9700F00075367B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		C5FD4E1A1A95ACC7009F4E79 = {
@@ -159,6 +202,7 @@
 		C5FD4E251A95ACC7009F4E79 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				C5E6D9881A9700F00075367B /* Images */,
 				C5FD4E281A95ACC7009F4E79 /* AppDelegate.swift */,
 				C5E6D97E1A95CC570075367B /* Categories */,
 				C5E6D9801A95CDF50075367B /* Constants */,
@@ -355,13 +399,25 @@
 			files = (
 				C5FD4E521A95AE22009F4E79 /* HomeTimelineViewController.swift in Sources */,
 				C5E6D9871A95D4050075367B /* StatusTableViewCell.swift in Sources */,
+				C55F22AD1A9B7E2300CA32A6 /* StatusView.swift in Sources */,
 				C5E6D9821A95CE060075367B /* Colors.swift in Sources */,
+				C57850FF1A9AD8DB00EBC97F /* BoxType.swift in Sources */,
+				C578510A1A9AF5C500EBC97F /* ComposeTextView.swift in Sources */,
+				C5E6D98A1A9723F70075367B /* AvatarImageView.swift in Sources */,
 				C5FD4E491A95ACFB009F4E79 /* LoginViewController.swift in Sources */,
+				C578510E1A9B4C0900EBC97F /* StatusViewController.swift in Sources */,
 				C5E6D97A1A95C5800075367B /* UIColor+Twitter.swift in Sources */,
+				C57851001A9AD8DB00EBC97F /* MutableBox.swift in Sources */,
+				C5E6D98C1A9726840075367B /* UIImageView+Twitter.swift in Sources */,
+				C57851021A9AE2F800EBC97F /* ComposeViewController.swift in Sources */,
 				C5E6D9781A95B4820075367B /* User.swift in Sources */,
 				C5E6D9841A95CF3C0075367B /* Status.swift in Sources */,
+				C57850FE1A9AD8DB00EBC97F /* Box.swift in Sources */,
+				C578510C1A9B164D00EBC97F /* StatusActionsView.swift in Sources */,
 				C5FD4E4D1A95AD87009F4E79 /* TwitterClient.swift in Sources */,
+				C54270741A9AC70C0010E601 /* RetweetStatusTableViewCell.swift in Sources */,
 				C5E6D9761A95B4060075367B /* SwiftyJSON.swift in Sources */,
+				C54270721A9829330010E601 /* NSDate+Twitter.swift in Sources */,
 				C5FD4E291A95ACC7009F4E79 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

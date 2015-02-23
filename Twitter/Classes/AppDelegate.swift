@@ -17,7 +17,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions
     launchOptions: [NSObject: AnyObject]?) -> Bool {
-      window.rootViewController = LoginViewController()
+      // For testing purposes:
+      twitterClient.requestSerializer.removeAccessToken()
+      if (twitterClient.authorized) {
+        User.fetchCurrentUser(
+          success: { (user) -> Void in
+
+          },
+          failure: { (error: NSError) -> Void in
+            fatalError("Failed to get current user!")
+          }
+        )
+
+        self.window.rootViewController = UINavigationController(
+          rootViewController: HomeTimelineViewController()
+        )
+      } else {
+        self.window.rootViewController = LoginViewController()
+      }
+
       window.makeKeyAndVisible()
 
       return true
@@ -30,36 +48,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           method: "POST",
           requestToken: BDBOAuth1Credential(queryString: url.query)!,
           success: { (credential: BDBOAuth1Credential!) -> Void in
-
-            let tc = self.twitterClient
-
-            tc.requestSerializer.saveAccessToken(credential)
-            tc.GET("1.1/account/verify_credentials.json",
-              parameters: nil,
-              success: {(operation: AFHTTPRequestOperation!,
-                response: AnyObject!) -> Void in
-                let homeTimelineViewController = HomeTimelineViewController()
-                let navigationController = UINavigationController(
-                  rootViewController: homeTimelineViewController
-                )
-                let user = User.create(response)
-
-                User.currentUser = user
-
+            SVProgressHUD.showSuccessWithStatus("Successfully authenticated!")
+            User.fetchCurrentUser(
+              success: { (user) -> Void in
                 _ = self.window.rootViewController?.presentViewController(
-                  navigationController,
+                  UINavigationController(
+                    rootViewController: HomeTimelineViewController()
+                  ),
                   animated: false,
                   completion: nil
                 )
               },
-              failure: { (operation: AFHTTPRequestOperation!,
-                error: NSError!) -> Void in
-                // Handle error
+              failure: { (error: NSError) -> Void in
+                fatalError("Failed to get current user!")
               }
             )
           },
           { (err: NSError!) -> Void in
-            // Handle error
+            fatalError("Failed to access token!")
           }
         )
       }

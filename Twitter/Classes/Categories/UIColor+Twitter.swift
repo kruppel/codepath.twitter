@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 kruppel. All rights reserved.
 //
 
+import UIKit
+
 extension UIColor {
 
   convenience init(hex: Int) {

@@ -19,19 +19,112 @@ private let _TwitterClientInstance = TwitterClient(
 
 class TwitterClient: BDBOAuth1RequestOperationManager {
 
-  func fetchHomeTimeline(#success: (response: AnyObject) -> Void,
-    error: (error: NSError) -> Void) {
-    GET("1.1/statuses/home_timeline.json",
+  func getAccountVerifyCredentials(#success: ((response: AnyObject) -> Void)?,
+    failure: ((error: NSError) -> Void)?) {
+    GET("1.1/account/verify_credentials.json",
       parameters: nil,
-      success: {(operation: AFHTTPRequestOperation!,
+      success: { (operation: AFHTTPRequestOperation!,
         response: AnyObject!) -> Void in
-        success(response: response)
+        _ = success?(response: response)
       },
       failure: { (operation: AFHTTPRequestOperation!,
         error: NSError!) -> Void in
         // Handle error
       }
     )
+  }
+
+  func getStatusesHomeTimeline(parameters: [String: AnyObject]?,
+    success: ((response: AnyObject) -> Void)?,
+    failure: ((error: NSError) -> Void)?) {
+    GET("1.1/statuses/home_timeline.json",
+      parameters: parameters,
+      success: { (operation: AFHTTPRequestOperation!,
+        response: AnyObject!) -> Void in
+        _ = success?(response: response)
+      },
+      failure: { (operation: AFHTTPRequestOperation!,
+        error: NSError!) -> Void in
+        // Handle error
+        _ = failure?(error: error)
+      }
+    )
+  }
+
+  func updateStatus(status: Status,
+    success: ((response: AnyObject) -> Void)?,
+    failure: ((error: NSError) -> Void)?) {
+      var parameters = [
+        "status": status.text
+      ]
+
+      if status.inReplyToStatusID? != nil {
+        parameters["in_reply_to_status_id"] = String(status.inReplyToStatusID!)
+      }
+
+      POST("1.1/statuses/update.json",
+        parameters: parameters,
+        success: { (operation: AFHTTPRequestOperation!,
+          response: AnyObject!) -> Void in
+          _ = success?(response: response)
+        },
+        failure: { (operation: AFHTTPRequestOperation!,
+          error: NSError!) -> Void in
+          // Handle error
+          _ = failure?(error: error)
+        }
+      )
+  }
+
+  func retweetStatus(id: String,
+    success: ((response: AnyObject) -> Void)?,
+    failure: ((error: NSError) -> Void)?) {
+      POST("1.1/statuses/retweet/\(id).json",
+        parameters: nil,
+        success: { (operation: AFHTTPRequestOperation!,
+          response: AnyObject!) -> Void in
+          _ = success?(response: response)
+        },
+        failure: { (operation: AFHTTPRequestOperation!,
+          error: NSError!) -> Void in
+          // Handle error
+          _ = failure?(error: error)
+        }
+      )
+  }
+
+  func createFavorite(id: String,
+    success: ((response: AnyObject) -> Void)?,
+    failure: ((error: NSError) -> Void)?) {
+      POST("1.1/favorites/create.json",
+        parameters: ["id": id],
+        success: { (operation: AFHTTPRequestOperation!,
+          response: AnyObject!) -> Void in
+          _ = success?(response: response)
+        },
+        failure: { (operation: AFHTTPRequestOperation!,
+          error: NSError!) -> Void in
+          // Handle error
+          _ = failure?(error: error)
+        }
+      )
+  }
+
+  func destroyFavorite(id: String,
+    success: ((response: AnyObject) -> Void)?,
+    failure: ((error: NSError) -> Void)?) {
+      DELETE("1.1/favorites/destroy.json",
+        parameters: ["id": id],
+        success: { (operation: AFHTTPRequestOperation!,
+          response: AnyObject!) -> Void in
+          _ = success?(response: response)
+        },
+        failure: { (operation: AFHTTPRequestOperation!,
+          error: NSError!) -> Void in
+          // Handle error
+          _ = failure?(error: error)
+        }
+      )
   }
 
   class var instance: TwitterClient {
