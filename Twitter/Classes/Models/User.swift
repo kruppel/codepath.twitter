@@ -76,6 +76,9 @@ struct User {
   var name: String!
   var screenName: String!
   var profileImageURL: NSURL!
+  var profileBannerURL: NSURL?
+  var profileBackgroundColor: UIColor?
+  var _data: AnyObject
 
   static var currentUser: User!
 
@@ -98,11 +101,36 @@ struct User {
       withTemplate: "_bigger.$1"
     )
 
+    let profileBannerURLString = json["profile_banner_url"].string
+    var profileBannerURL: NSURL?
+
+    if profileBannerURLString != nil {
+      profileBannerURL = NSURL(string: "\(profileBannerURLString!)/mobile_retina")
+    }
+
+    let profileBackgroundColorHex = json["profile_background_color"].string
+    var profileBackgroundColor: UIColor?
+
+    if profileBackgroundColorHex != nil {
+      var rgbValue: UInt32 = 0
+      let scanner: NSScanner = NSScanner(string: profileBackgroundColorHex!)
+      scanner.scanHexInt(&rgbValue)
+
+      let red   = CGFloat( (rgbValue & 0xFF0000) >> 16) / 255.0
+      let green = CGFloat( (rgbValue & 0xFF00) >> 8) / 255.0
+      let blue  = CGFloat( (rgbValue & 0xFF) ) / 255.0
+
+      profileBackgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+    }
+
     return User(
       id: json["id"].int,
       name: json["name"].string,
       screenName: json["screen_name"].string,
-      profileImageURL: NSURL(string: biggerImageURL)
+      profileImageURL: NSURL(string: biggerImageURL),
+      profileBannerURL: profileBannerURL,
+      profileBackgroundColor: profileBackgroundColor,
+      _data: data
     )
   }
 

@@ -49,7 +49,13 @@ class StatusViewController: UIViewController, UITableViewDelegate {
       forCellReuseIdentifier: "RetweetStatusTableViewCell")
 
     statusView = StatusView(frame: CGRectMake(0, 0, view.frame.width, 250))
-    statusView!.status = status
+    
+    if (status.retweetedStatus != nil) {
+      statusView!.status = status.retweetedStatus!.value
+    } else {
+      statusView!.status = status
+    }
+
     statusesTableView.tableHeaderView = statusView
 
     statusesTableView.tableFooterView = UIView(frame: CGRectZero)

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C511F44A1AA436690078413D /* MentionsTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C511F4491AA436690078413D /* MentionsTimelineViewController.swift */; };
+		C511F44C1AA436B30078413D /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C511F44B1AA436B30078413D /* TimelineViewController.swift */; };
+		C51F0C1B1AA461BD0094CCAC /* ProfileTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51F0C1A1AA461BD0094CCAC /* ProfileTimelineViewController.swift */; };
+		C52B87611AA3950C009CE2BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52B87601AA3950C009CE2BD /* HomeViewController.swift */; };
+		C52B87631AA3E460009CE2BD /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52B87621AA3E460009CE2BD /* SideMenuView.swift */; };
 		C54270721A9829330010E601 /* NSDate+Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54270711A9829330010E601 /* NSDate+Twitter.swift */; };
 		C54270741A9AC70C0010E601 /* RetweetStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54270731A9AC70C0010E601 /* RetweetStatusTableViewCell.swift */; };
 		C55F22AD1A9B7E2300CA32A6 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F22AC1A9B7E2300CA32A6 /* StatusView.swift */; };
@@ -50,6 +55,11 @@
 		60A2B79C0EFDC2503E89BD8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC02EFC1134C80CBC6360042 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B0ECEA4C90E8DE0F1BCE53BA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C511F4491AA436690078413D /* MentionsTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MentionsTimelineViewController.swift; path = Classes/ViewControllers/MentionsTimelineViewController.swift; sourceTree = "<group>"; };
+		C511F44B1AA436B30078413D /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineViewController.swift; path = Classes/ViewControllers/TimelineViewController.swift; sourceTree = "<group>"; };
+		C51F0C1A1AA461BD0094CCAC /* ProfileTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileTimelineViewController.swift; path = Classes/ViewControllers/ProfileTimelineViewController.swift; sourceTree = "<group>"; };
+		C52B87601AA3950C009CE2BD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Classes/ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
+		C52B87621AA3E460009CE2BD /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuView.swift; path = Classes/Views/SideMenuView.swift; sourceTree = "<group>"; };
 		C54270711A9829330010E601 /* NSDate+Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+Twitter.swift"; path = "Classes/Categories/NSDate+Twitter.swift"; sourceTree = "<group>"; };
 		C54270731A9AC70C0010E601 /* RetweetStatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RetweetStatusTableViewCell.swift; path = Classes/Views/RetweetStatusTableViewCell.swift; sourceTree = "<group>"; };
 		C55F22AC1A9B7E2300CA32A6 /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusView.swift; path = Classes/Views/StatusView.swift; sourceTree = "<group>"; };
@@ -116,7 +126,11 @@
 			children = (
 				C5FD4E481A95ACFB009F4E79 /* LoginViewController.swift */,
 				C5FD4E511A95AE22009F4E79 /* HomeTimelineViewController.swift */,
+				C52B87601AA3950C009CE2BD /* HomeViewController.swift */,
 				C57851011A9AE2F800EBC97F /* ComposeViewController.swift */,
+				C51F0C1A1AA461BD0094CCAC /* ProfileTimelineViewController.swift */,
+				C511F4491AA436690078413D /* MentionsTimelineViewController.swift */,
+				C511F44B1AA436B30078413D /* TimelineViewController.swift */,
 				C578510D1A9B4C0900EBC97F /* StatusViewController.swift */,
 			);
 			name = ViewControllers;
@@ -163,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				C5E6D9861A95D4050075367B /* StatusTableViewCell.swift */,
+				C52B87621AA3E460009CE2BD /* SideMenuView.swift */,
 				C578510B1A9B164D00EBC97F /* StatusActionsView.swift */,
 				C57851091A9AF5C500EBC97F /* ComposeTextView.swift */,
 				C55F22AC1A9B7E2300CA32A6 /* StatusView.swift */,
@@ -403,8 +418,10 @@
 				C5E6D9821A95CE060075367B /* Colors.swift in Sources */,
 				C57850FF1A9AD8DB00EBC97F /* BoxType.swift in Sources */,
 				C578510A1A9AF5C500EBC97F /* ComposeTextView.swift in Sources */,
+				C52B87611AA3950C009CE2BD /* HomeViewController.swift in Sources */,
 				C5E6D98A1A9723F70075367B /* AvatarImageView.swift in Sources */,
 				C5FD4E491A95ACFB009F4E79 /* LoginViewController.swift in Sources */,
+				C511F44C1AA436B30078413D /* TimelineViewController.swift in Sources */,
 				C578510E1A9B4C0900EBC97F /* StatusViewController.swift in Sources */,
 				C5E6D97A1A95C5800075367B /* UIColor+Twitter.swift in Sources */,
 				C57851001A9AD8DB00EBC97F /* MutableBox.swift in Sources */,
@@ -414,6 +431,9 @@
 				C5E6D9841A95CF3C0075367B /* Status.swift in Sources */,
 				C57850FE1A9AD8DB00EBC97F /* Box.swift in Sources */,
 				C578510C1A9B164D00EBC97F /* StatusActionsView.swift in Sources */,
+				C52B87631AA3E460009CE2BD /* SideMenuView.swift in Sources */,
+				C511F44A1AA436690078413D /* MentionsTimelineViewController.swift in Sources */,
+				C51F0C1B1AA461BD0094CCAC /* ProfileTimelineViewController.swift in Sources */,
 				C5FD4E4D1A95AD87009F4E79 /* TwitterClient.swift in Sources */,
 				C54270741A9AC70C0010E601 /* RetweetStatusTableViewCell.swift in Sources */,
 				C5E6D9761A95B4060075367B /* SwiftyJSON.swift in Sources */,

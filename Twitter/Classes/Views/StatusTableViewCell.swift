@@ -14,7 +14,7 @@ class StatusTableViewCell: UITableViewCell {
 
   var status: Status?
 
-  var timelineController: HomeTimelineViewController?
+  var timelineController: TimelineViewController?
 
   lazy internal var userAvatar: AvatarImageView = AvatarImageView()
   lazy internal var userName: UILabel = UILabel()
@@ -29,7 +29,7 @@ class StatusTableViewCell: UITableViewCell {
         "V:|-10-[avatar(48)]",
         "V:|-10-[name]-3-[status]-8-[actions(18)]-10-|",
         "V:|-10-[ts]",
-        "H:|-10-[avatar(48)]-8-[name]-8-[screenname]-(>=15)-[ts]-15-|",
+        "H:|-10-[avatar(48)]-8-[name]-8-[screenname]-(>=5)-[ts]-15-|",
         "H:[avatar]-8-[status]-25-|",
         "H:[avatar]-8-[actions(180)]"
       ]
@@ -67,9 +67,10 @@ class StatusTableViewCell: UITableViewCell {
 
     self.status = status
 
+    userAvatar.user = user
     userAvatar.setImageWithURLRequestOrCache(user.profileImageURL!,
       success: nil,
-      error: nil
+      failure: nil
     )
     userName.text = user.name
     userScreenName.text = "@\(user.screenName)"

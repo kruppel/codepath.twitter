@@ -51,6 +51,41 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
     )
   }
 
+  func getStatusesMentionsTimeline(parameters: [String: AnyObject]?,
+    success: ((response: AnyObject) -> Void)?,
+    failure: ((error: NSError) -> Void)?) {
+      GET("1.1/statuses/mentions_timeline.json",
+        parameters: parameters,
+        success: { (operation: AFHTTPRequestOperation!,
+          response: AnyObject!) -> Void in
+          _ = success?(response: response)
+        },
+        failure: { (operation: AFHTTPRequestOperation!,
+          error: NSError!) -> Void in
+          // Handle error
+          _ = failure?(error: error)
+        }
+      )
+  }
+
+
+  func getStatusesUserTimeline(parameters: [String: AnyObject]?,
+    success: ((response: AnyObject) -> Void)?,
+    failure: ((error: NSError) -> Void)?) {
+      GET("1.1/statuses/user_timeline.json",
+        parameters: parameters,
+        success: { (operation: AFHTTPRequestOperation!,
+          response: AnyObject!) -> Void in
+          _ = success?(response: response)
+        },
+        failure: { (operation: AFHTTPRequestOperation!,
+          error: NSError!) -> Void in
+          // Handle error
+          _ = failure?(error: error)
+        }
+      )
+  }
+
   func updateStatus(status: Status,
     success: ((response: AnyObject) -> Void)?,
     failure: ((error: NSError) -> Void)?) {

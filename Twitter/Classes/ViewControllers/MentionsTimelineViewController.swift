@@ -8,17 +8,17 @@
 
 import UIKit
 
-class HomeTimelineViewController: TimelineViewController {
+class MentionsTimelineViewController: TimelineViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    navigationItem.title = "Home"
+    navigationItem.title = "Mentions"
   }
 
   override func fetchTimeline(completion: (response: AnyObject) -> Void) {
     super.fetchTimeline(completion)
-    twitterClient.getStatusesHomeTimeline(
+    twitterClient.getStatusesMentionsTimeline(
       parameters,
       success: completion,
       failure: { (error: NSError!) -> Void in

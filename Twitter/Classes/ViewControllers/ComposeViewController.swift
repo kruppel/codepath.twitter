@@ -10,7 +10,7 @@ import UIKit
 
 class ComposeViewController: UIViewController, UITextViewDelegate {
 
-  var timelineDelegate: HomeTimelineViewController?
+  var timelineDelegate: TimelineViewController?
   var inReplyToStatusID: Int?
 
   private let twitterClient: TwitterClient = TwitterClient.instance

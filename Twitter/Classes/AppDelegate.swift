@@ -18,20 +18,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions
     launchOptions: [NSObject: AnyObject]?) -> Bool {
       // For testing purposes:
-      twitterClient.requestSerializer.removeAccessToken()
+      //twitterClient.requestSerializer.removeAccessToken()
       if (twitterClient.authorized) {
         User.fetchCurrentUser(
           success: { (user) -> Void in
-
+            NSNotificationCenter.defaultCenter().postNotificationName(
+              "currentUser:fetched",
+              object: nil
+            )
           },
           failure: { (error: NSError) -> Void in
             fatalError("Failed to get current user!")
           }
         )
 
-        self.window.rootViewController = UINavigationController(
-          rootViewController: HomeTimelineViewController()
-        )
+        self.window.rootViewController = HomeViewController()
+//        self.window.rootViewController = UINavigationController(
+//          rootViewController: HomeTimelineViewController()
+//        )
       } else {
         self.window.rootViewController = LoginViewController()
       }

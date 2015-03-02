@@ -11,7 +11,7 @@ import UIKit
 extension UIImageView {
 
   func setImageWithURLRequestOrCache(url: NSURL,
-    success: ((image: UIImage) -> Void)!, error: ((error: NSError) -> Void)!) {
+    success: ((image: UIImage) -> Void)!, failure: ((error: NSError) -> Void)!) {
     let request = NSMutableURLRequest(URL: url)
     let cached = UIImageView.sharedImageCache().cachedImageForRequest(
       request as NSURLRequest
@@ -34,7 +34,9 @@ extension UIImageView {
               self.image = image
             })
           },
-          failure: nil
+          failure: { (request, response, error) -> Void in
+            println(error)
+          }
         )
       })
     }

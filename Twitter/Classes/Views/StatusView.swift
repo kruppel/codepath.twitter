@@ -45,19 +45,22 @@ class StatusView: UIView {
     didSet {
       let user = status!.user
 
+      userAvatar.user = user
       userAvatar.setImageWithURLRequestOrCache(user.profileImageURL!,
         success: nil,
-        error: nil
+        failure: nil
       )
       userAvatar.backgroundColor = UIColor.blackColor()
       userName.text = user.name
       userScreenName.text = "@\(user.screenName)"
       absoluteTimestamp.text = status!.createdAt!.absolute
+      statusText.numberOfLines = 0
       statusText.text = status!.text
       highlightScreenNames()
 
       setNeedsLayout()
       layoutIfNeeded()
+      statusText.preferredMaxLayoutWidth = statusText.frame.size.width
       let size = systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
       frame = CGRectMake(
         0,
@@ -137,11 +140,11 @@ class StatusView: UIView {
         highlighted.addAttribute(
           NSForegroundColorAttributeName,
           value: kTwitterColors.Primary.color(),
-          range: NSMakeRange(start, start + countElements(word))
+          range: NSMakeRange(start, countElements(word))
         )
       }
     }
-    
+
     statusText.attributedText = highlighted
   }
 }
